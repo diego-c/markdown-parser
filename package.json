@@ -1,7 +1,14 @@
 {
   "name": "markdown_parser",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple markdown -> HTML real time parser app",
+  "keywords": [
+    "markdown",
+    "html",
+    "parser",
+    "socket.io",
+    "markdown-it"
+  ],
   "main": "server.js",
   "scripts": {
     "compile": "node-sass -w ./public/scss/main.scss ./public/css/style.css",
