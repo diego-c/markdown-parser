@@ -1,0 +1,28 @@
+.slideLeft {
+    animation: slideLeft .5s forwards;
+}
+
+.on {
+    animation: on .3s forwards;
+}
+.off {
+    animation: off .3s forwards;
+}
+
+.ripple {
+    &::after {
+        animation: ripple .3s;
+    }
+}
+
+.backgroundColorOn {
+    &::before {
+        animation: backgroundColorOn .3s forwards;
+    }
+}
+
+.backgroundColorOff {
+    &::before {
+        animation: backgroundColorOff .3s forwards;
+    }
+}

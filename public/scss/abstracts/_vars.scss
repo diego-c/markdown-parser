@@ -1,0 +1,54 @@
+// margins
+$margin-small: 1rem;
+$margin-medium: 2rem;
+$margin-big: 3rem;
+
+$margin-parser-small: 5%;
+$margin-parser-medium: 10%;
+$margin-parser-big: 15%;
+
+// box shadows
+$box-shadow-btn-default: 0 1.2rem 4rem rgba(0, 0, 0, .2);
+$box-shadow-btn-hover: 0 .8rem 2rem rgba(0, 0, 0, .2);
+$box-shadow-btn-active: 0 .4rem 1rem rgba(0, 0, 0, .2);
+
+$box-shadow-header: 0 2rem 4rem rgba(0,0, 0, .3);
+$box-shadow-header-text: 1rem 1rem 3rem rgba(0, 0, 0, .2), -1rem -1rem 3rem rgba(0, 0, 0, .2);
+$box-shadow-nav: 0 1rem 4rem rgba(0, 0, 0, .3);
+
+// colors
+$color-text-light: #4B5555;
+$color-text-dark: #3E3E3E;
+$color-text-darker: #2E343B;
+$color-header-background-light: #9dd7b4;
+$color-header-background-dark: #74a688;
+$color-link:#806C00;
+$color-light-yellow: #effdbb;
+$color-parser-background: #deeaee;
+
+$monokai-dark: #272822;
+$monokai-pink: #F92672;
+$monokai-blue: #66D9EF;
+$monokai-green: #A6E22E;
+$monokai-orange: #FD971F;
+
+// EACH SECTION WIDTH = (100% - HORIZONTAL GUTTER) / 2
+// gutters for the parser
+$parser-vertical-padding: 5%;
+$parser-horizontal-padding: 5%;
+$gutter-horizontal: 20%;
+$gutter-vertical: 10rem;
+
+$parser-section-width: calc((100% - #{$gutter-horizontal}) / 2);
+
+// Toggler
+$toggler-height: 2.5rem;
+$toggler-width: 6rem;
+$toggler-border-radius: 10rem;
+$toggler-end: calc(#{$toggler-width} - #{$toggler-height});
+
+$toggler-background: lightgray;
+$toggler-background-on: #6b9b37;
+$toggler-outer-background: #9ccc65;
+$toggler-inner-background: gray;
+

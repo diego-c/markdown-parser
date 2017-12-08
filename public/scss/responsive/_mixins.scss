@@ -1,0 +1,145 @@
+// Smartphones: 320px - 480px
+@mixin smartphones {
+    html {
+        font-size: 46.875%;
+    }
+
+    .header {
+        &__text {
+            width: 100%;
+            padding: 15% 2%;
+
+            &--title {
+                font-size: 3.5rem;
+            }
+            &--subtitle {
+                font-size: 2.5rem;
+            }
+            
+        }
+    }
+
+    .markdown, .html {
+        width: 100%;
+    }
+
+    .markdown {
+        margin-bottom: $margin-parser-medium;
+    }
+
+    .html {
+        float: none;
+    }
+
+    .preview {
+        float: right;
+        display: block;
+    }
+
+    .parser {
+        padding: 15% 5%;
+    }
+}
+
+// Phablets: 481px - 767px
+@mixin phablets {
+    html {
+        font-size: 53.125%;
+    }
+
+    .header {
+        &__text {
+            width: 90%;
+            padding: 8% 2%;
+
+            &--title {
+                font-size: 3.5rem;
+            }
+            &--subtitle {
+                font-size: 2.5rem;
+            }
+            
+        }
+    }
+
+    .markdown, .html {
+        width: 100%;
+    }
+
+    .markdown {
+        margin-bottom: $margin-parser-medium;
+    }
+
+    .html {
+        float: none;
+    }
+
+    .preview {
+        float: right;
+        display: block;
+    }
+
+    .parser {
+        padding: 15% 5%;
+    }
+}
+
+// Tablets: 768px - 1024px
+@mixin tablets {
+    html {
+        font-size: 59.375%; 
+    }
+
+    .header {
+        &__text {
+            width: 70%;
+            padding: 3% 0 6% 0;
+
+            &--title {
+                font-size: 3.5rem;
+            }
+            &--subtitle {
+                font-size: 2.5rem;
+            }
+            
+        }        
+    }
+
+    .markdown, .html {
+        width: 100%;
+    }
+
+    .markdown {
+        margin-bottom: $margin-parser-small;
+    }
+
+    .html {
+        float: none;
+    }
+
+    .preview {
+        float: right;
+        display: block;
+    }
+
+    .parser {
+        padding: 15% 5%;
+    }
+}
+
+// Notebooks, small desktop
+@mixin notebooks {
+    .header {
+        &__text {
+            width: 60%;
+            padding: 3% 2% 6% 2%;
+        }
+    }
+    .markdown {
+        width: 45%;
+        margin-right: 10%;
+    }
+    .html {
+        width: 45%;
+    }
+}

@@ -1,0 +1,31 @@
+const express = require('express'),
+app = express(),
+helm = require('helmet'),
+env = require('dotenv').config(),
+server = require('http').Server(app),
+io = require('socket.io')(server),
+md = require('markdown-it')(),
+redis = require('redis'),
+client = redis.createClient(),
+uuidv4 = require('uuid/v4'),
+parser = require('cookie-parser'),
+session = require('express-session'),
+RedisStore = require('connect-redis')(session),
+path = require('path');
+
+module.exports = {
+    express,
+    app,
+    helm,
+    env,
+    server,
+    io,
+    md,
+    redis,
+    client,
+    uuidv4,
+    parser,
+    session,
+    RedisStore,
+    path
+}

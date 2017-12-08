@@ -1,0 +1,16 @@
+.footer {
+    text-align: center;
+    background-color: $monokai-dark;
+    padding: 3rem;
+    
+    &__text {
+        color: $monokai-orange;
+        &:not(:last-child) {
+            margin-bottom: $margin-medium;
+        }
+    }
+
+    &__link {
+        padding: .5rem;
+    }
+}

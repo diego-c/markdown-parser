@@ -1,0 +1,23 @@
+.markdown {
+    float: left;
+    margin-right: $gutter-horizontal;
+    width: $parser-section-width;
+
+    &__hint {
+        margin-top: $margin-big;
+    }
+    &__img-wrapper {
+        position: relative;
+        top: .5rem;
+        display: inline-block;
+        height: 3.2rem;
+        &--img {
+            display: inline-block;
+            height: 100%;
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+    }
+}

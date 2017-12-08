@@ -1,0 +1,50 @@
+.header {
+    background-image: linear-gradient(to bottom right, $color-header-background-light, $color-header-background-dark), url('../../img/header.jpg');
+    height: 70vh;
+    background-blend-mode: hard-light;
+    background-position: center top;
+    background-attachment: fixed;
+    position: relative;
+    box-shadow: $box-shadow-header;
+
+    &__fork {
+        display: inline-block;        
+        padding: 2rem 2rem;
+        animation: slideRight .8s backwards ease-in;
+        animation-delay: .3s;
+        &-link {
+            display: flex;
+            align-items: center;
+            &--icon {
+                display: inline-block;
+                height: 6rem;
+                margin-right: $margin-medium;
+            }
+
+            &--text {
+                background-color: $color-light-yellow;
+                box-shadow: $box-shadow-nav;
+            }
+        }
+    }
+
+    &__text {
+        position: absolute;
+        display: inline-block;
+        background-color: rgba($color-header-background-light, .8);     
+        padding: 3%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: $box-shadow-header-text;
+        animation: reveal 1s;
+        &--title,
+        &--subtitle {
+            text-align: center;
+        }
+        &--title {
+            margin-bottom: $margin-big;
+        }
+    }   
+   
+}

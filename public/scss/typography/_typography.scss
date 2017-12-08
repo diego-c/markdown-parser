@@ -1,0 +1,126 @@
+body {
+    font-family: "Source Sans Pro", sans-serif;  
+    font-weight: 400;  
+    color: $color-text-light;
+    line-height: 1.5;
+}
+
+.header__fork {    
+    &-link {
+        text-decoration: none;
+        &--text {
+        padding: 1.5rem;
+        border-radius: 50rem;
+        font-size: 2rem;
+        color: $color-link;       
+        }
+    }   
+}
+.header__text {
+    &--title {
+        font-size: 4rem;
+        letter-spacing: 1.5px;
+        word-spacing: .5rem;
+    }
+    &--subtitle {
+        font-size: 3rem;
+        letter-spacing: 1px;
+        font-weight: 300;
+        word-spacing: .3rem;
+    }
+    &--link {  
+        @include link;              
+    }
+}
+
+.parser__title {
+    @include parser-title;
+    text-align: center;
+}
+.markdown {
+    &__title {
+        @include parser-title;        
+    }
+
+    &__hint {
+        @include parser-title;        
+        margin-top: 0;
+
+        &--link {
+            position: relative;
+            &:link,
+            &:active,
+            &:visited {
+                text-decoration: none;
+                color: $color-link;           
+            }
+            &::after {
+                @include link-underline;
+            }
+            &:hover::after {
+                @include link-transition;
+            }
+        }
+    }
+
+    &__textarea {
+        @include textarea;
+    }
+}
+
+.html {
+
+    &__title {
+        @include parser-title;
+    }
+
+    &__textarea {
+        color: $monokai-orange;
+    }
+}
+
+.footer {
+    font-size: 2rem;
+    &__text {
+
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $monokai-pink;       
+    }
+}
+
+.preview {
+    display: inline-block;
+    float: right;
+    margin-bottom: $margin-medium;
+    padding-right: 5%;
+
+    &-area-wrapper {
+        position: relative;
+    }
+
+    &__text {
+        font-size: 2.5rem;
+        display: inline-block;
+        margin-right: $margin-medium;
+        vertical-align: bottom;
+    }
+
+    &__area {
+        background-color: $monokai-dark;
+        color: $monokai-blue;        
+        width: 100%;        
+        padding: 4rem;
+        max-height: 100%;
+
+        & > * {
+            font-size: 2.5rem; 
+            
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

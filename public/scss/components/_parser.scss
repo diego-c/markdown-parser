@@ -1,0 +1,27 @@
+.parser {
+    padding: $parser-vertical-padding $parser-horizontal-padding;
+    
+    &__title {
+        height: 3.2rem;
+        
+        &:not(:last-child) {
+            margin-bottom: $margin-big;
+        }
+    }
+
+    &__img-wrapper {
+        position: relative;
+        top: .5rem;
+        height: 100%;
+        margin-left: $margin-small;
+        &--img {
+            display: inline-block;
+            height: 100%;
+        }
+    }
+
+    &__wrapper {
+        margin-top: $gutter-vertical;
+        @include clearfix;
+    }
+}

@@ -1,0 +1,19 @@
+.copy {
+    display: inline-block;
+    margin-top: $margin-medium;
+    margin-bottom: $margin-big;
+
+    &__btn {
+        @include btn;
+    }
+
+    &__tooltip {
+        opacity: 0;
+        position: relative;
+        font-size: 2rem;
+        display: inline-block;
+        padding: .8rem 1rem .8rem 2rem;
+        background: $color-header-background-light;
+        clip-path: polygon(0 50%, 25% 0, 100% 0, 100% 100%, 25% 100%, 0 50%);
+    }
+}
