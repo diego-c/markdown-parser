@@ -1,6 +1,6 @@
-const requires = require('./packages/require');
-const router = require('./routes/router');
-const db = require('./db/connection');
+const requires = require('./packages/require'),
+router = require('./routes/router'),
+db = require('./db/connection');
 require('./io/socket');
 
 requires.app.use(requires.helm());

@@ -7,7 +7,7 @@ A real-time markdown -> HTML parser. The content is always saved in local storag
 
 :arrow_forward: Frontend:
 - HTML
-- CSS 
+- (S)CSS 
 - JavaScript
 
 
@@ -23,7 +23,7 @@ A real-time markdown -> HTML parser. The content is always saved in local storag
 ## Local build
 
 1. Install dependencies: `npm install`
-2. Change the stylesheet link in `views/index.html` to: `<link rel="stylesheet" href="./css/style.css">`
+2. Specify RedisDB `host` and `port` on `db/connection.js`
 3. Compile SCSS (watching changes): `npm run compile`
 4. Start the server on port 4000: `npm run serve`
 
@@ -32,3 +32,15 @@ A real-time markdown -> HTML parser. The content is always saved in local storag
 
 - Add syntax highlighting
 - Theme selection (Monokai is the current one)
+
+## License
+
+The MIT License
+
+Copyright (c) 2017 diego-c
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
