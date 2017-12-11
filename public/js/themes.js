@@ -19,4 +19,10 @@ function pickTheme(t) {
     codeHTML.setOption('theme', t);
     
     currentTheme = t;
+
+    localStorage.setItem('_local', JSON.stringify({
+        markdown: codeMarkdown.getValue(),
+        html: codeHTML.getValue(),
+        theme: currentTheme
+    }));
 }
