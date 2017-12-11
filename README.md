@@ -30,8 +30,9 @@ A real-time markdown -> HTML parser. The content is always saved in local storag
 
 ## Suggested improvements:
 
-- Add syntax highlighting
+~~- Add syntax highlighting~~ (:white_check_mark: Added CodeMirror)
 - Theme selection (Monokai is the current one)
+- Style the preview iframe
 
 ## License
 
