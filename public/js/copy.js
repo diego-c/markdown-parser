@@ -1,19 +1,34 @@
 function initCopy() {
 Array.prototype.slice.call(copyBtn).forEach(function(btn) {
     btn.addEventListener('click', function(e) {
-        var parent = e.target.parentNode.parentNode;
-        var txt = parent.querySelector('.textarea');
         
-        txt.select();
+        var txt;
 
-        try {
-            document.execCommand('copy');
-            console.log(txt);
-            txt.id === 'markdown' ? revealTooltip(mdTooltip) : revealTooltip(htmlTooltip);           
-            
-        } catch (err) {
-            console.log('Oops, unable to copy');
-        }            
+        if (document.execCommand && typeof document.execCommand == 'function') {
+            if (e.target.parentNode.parentNode.className === 'markdown') {
+                txt = codeMarkdown.getValue();
+                revealTooltip(mdTooltip);
+            } else {
+                txt = codeHTML.getValue();
+                revealTooltip(htmlTooltip);
+            }
+        } else {
+            alert("Sorry, your browser doesn't support this feature 😣");
+        }        
+
+        var x = window.scrollX;
+        var y = window.scrollY;
+
+        var txtArea = document.createElement('textarea');
+        document.body.appendChild(txtArea);
+        txtArea.value = txt;
+        txtArea.focus();
+        window.scrollTo(x, y);
+        txtArea.select();
+        document.execCommand('copy');
+
+        txtArea.remove();
+             
     });
 });
 }

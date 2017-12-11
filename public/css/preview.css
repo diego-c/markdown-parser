@@ -1,0 +1,17 @@
+/* These basic styles should be applied to the preview iframe content */
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    font-family: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Source Sans Pro", sans-serif;
+    color: aqua;
+}

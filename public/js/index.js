@@ -1,14 +1,9 @@
-var markdown = document.querySelector('#markdown');
-var html = document.querySelector('#html');
-var preview = document.querySelector('#preview');
+var previewFrame = document.querySelector('#preview');
 var copyBtn = document.querySelectorAll('.btn');
 var mdTooltip = document.querySelector('.copy__tooltip--markdown');
 var htmlTooltip = document.querySelector('.copy__tooltip--html');
 var text = "";
 var socket = io.connect('localhost:4000');
-var md = "";
-var htmlTxt = "";
-var localData = JSON.parse(localStorage.getItem('_local')) || { markdown: md, html: htmlTxt };
 
 socket.on('server response', function(response) {
     md = response.markdown;
@@ -17,26 +12,37 @@ socket.on('server response', function(response) {
         markdown: md,
         html: htmlTxt
     }));
-    html.value = htmlTxt;
-    preview.innerHTML = htmlTxt;
+    codeHTML.setOption('value', htmlTxt);
+    getPreview(codeHTML);
 });
 
+function getPreview(content) {
+    var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
+    preview.open();
+    preview.write(content.getValue());
+    preview.close();
+}
+
+function stylePreview() {
+    var link = document.createElement('link');
+    link.href = "preview.css";
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document.head.appendChuld(link);
+}
 document.addEventListener('DOMContentLoaded', function() {
         initCopy();
-        markdown.value = localData.markdown;
-        html.value = localData.html; 
-        preview.innerHTML = localData.html;       
+        stylePreview();
+        getPreview(codeHTML);        
         
-        markdown.addEventListener('input', function(e) {
-        if (e.target.value !== text) {
-            text = e.target.value;
+        codeMarkdown.on('change', function() {
+            text = codeMarkdown.getValue('');
             socket.emit('markdown', { data: text });
-            
+        })       
+        
+   
             /*
              *  Ajax implementation - see @ajax.js 
+             *  ajaxParser();
              */
-            // ajaxParser();
-            
-        }
-    })    
 })
