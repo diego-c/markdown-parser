@@ -23,9 +23,10 @@ A real-time markdown -> HTML parser. The content is always saved in local storag
 ## Local build
 
 1. Install dependencies (nodemon is required to be installed globally): `npm install`
-2. Specify RedisDB `host` and `port` on `db/connection.js`
-3. Compile SCSS (watching changes): `npm run compile`
-4. Start the server on port 4000: `npm run serve`
+2. Start RedisDB server: `redis-server &`
+3. Specify RedisDB `host` and `port` on `db/connection.js`
+4. Compile SCSS (watching changes): `npm run compile`
+5. Start the server on port 4000: `npm run serve`
 
 
 ## Suggested improvements:
