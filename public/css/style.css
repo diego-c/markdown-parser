@@ -293,6 +293,16 @@ body {
   .footer__link {
     padding: .5rem; }
 
+.themes {
+  margin-top: 5%;
+  text-align: center;
+  font-size: 2rem; }
+  .themes__label {
+    font-size: 2.2rem;
+    margin-right: 1rem; }
+  .themes__picker {
+    padding: .2rem; }
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
@@ -456,7 +466,9 @@ body {
     float: right;
     display: block; }
   .parser {
-    padding: 15% 5%; } }
+    padding: 15% 5%; }
+  .themes {
+    margin-top: 20%; } }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
   html {
@@ -478,7 +490,9 @@ body {
     float: right;
     display: block; }
   .parser {
-    padding: 15% 5%; } }
+    padding: 15% 5%; }
+  .themes {
+    margin-top: 10%; } }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   html {

@@ -6,11 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+
     <!-- CODE MIRROR CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/codemirror.min.css" integrity="sha256-ocsH57eUY9pDJgPCOUIkWm60KNyVV8pexKFnGgXCyGs=" crossorigin="anonymous" />
-    <!-- MONOKAI THEME -->
+
+    <!-- THEMES -->
+
+    <!-- MONOKAI -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/theme/monokai.min.css" integrity="sha256-6ov3WWd9ybfZPeJBlXBgQuD/aLhTRCEp5kBhqD9ke0o=" crossorigin="anonymous" />
+
+    <!-- DRACULA -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/theme/dracula.min.css" integrity="sha256-Dq8vPj3GNwTg9rflLnPQ8bDSLndsRxjmtWRXOwcWR4g=" crossorigin="anonymous" />
+    
+    <!-- MATERIAL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/theme/material.min.css" integrity="sha256-UyTiM5wwtuGiISIGyvkdYa9kgCRJmBQ+OYU72oexofc=" crossorigin="anonymous" />
+    
+    <!-- MIDNIGHT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/theme/midnight.min.css" integrity="sha256-kRJfLCotf0zxZ1yktcjFbuFPF5lZ728kqWqNJnVzSk0=" crossorigin="anonymous" />
+    
+    <!-- SOLARIZED -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/theme/solarized.min.css" integrity="sha256-v5CcBJnFb3uNFDq7uhR4sIS7yihsXlBxN+cwxjtzp7c=" crossorigin="anonymous" />
+
+    <!-- RAILSCASTS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/theme/railscasts.min.css" integrity="sha256-F4plg5r0MTIXbNJ+KErz9aTJojKh8drwZSWRUBQsKOU=" crossorigin="anonymous" />
+
+    <!-- COBALT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/theme/cobalt.min.css" integrity="sha256-w+8VeOcoKzd5XqQTdITPf1v7o1OGGNWu0CUVEFVSMOc=" crossorigin="anonymous" />
+
+    <!-- PARAISO LIGHT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/theme/paraiso-light.min.css" integrity="sha256-rDjysMGhr6fQYvuXhzJy2/7Q9VKi064CklDCA11bmrQ=" crossorigin="anonymous" />
+
+    <!-- PARAISO DARK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/theme/paraiso-dark.min.css" integrity="sha256-qZ3eSOsXWmFBQ87+cSEtitcNQz5SrnaP7Ck2+vtfNBA=" crossorigin="anonymous" />
+    
+    <!-- THE MATRIX -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/theme/the-matrix.min.css" integrity="sha256-X2MvIbX+KIUGVMNfKJUJzppWUWQevbZoxSfRTD5x/2k=" crossorigin="anonymous" />
+
+    <!-- MAIN STYLES -->
     <link rel="stylesheet" href="./css/style.css">
+
     <title>Simple Markdown Parser</title>
 </head>
 <body>
@@ -26,10 +60,28 @@
     
     <main class="main">
         <section class="parser">
-            <h3 class="parser__title">Your work is always saved <span class="parser__img-wrapper"><img src="./img/sunglasses.png" alt="sunglasses" class="parser__img-wrapper--img"></span></h3>
-            <h3 class="parser__title">Try refreshing the page or opening it in another tab!</h3>
-            <div class="parser__wrapper">
-            <div class="markdown">
+            <div class="parser__header">
+                <h3 class="parser__title">Your work is always saved <span class="parser__img-wrapper"><img src="./img/sunglasses.png" alt="sunglasses" class="parser__img-wrapper--img"></span></h3>
+                <h3 class="parser__title">Try refreshing the page or opening it in another tab!</h3>
+                <div class="themes">
+                    <label class="themes__label" for="themes-picker">Theme</label>
+                    <select class="themes__picker" id="themes-picker">
+                        <option value="Monokai" selected>Monokai</option>
+                        <option value="Dracula">Dracula</option>
+                        <option value="Material">Material</option>
+                        <option value="Midnight">Midnight</option>
+                        <option value="Solarized">Solarized</option>
+                        <option value="Railscasts">Railscasts</option>
+                        <option value="Cobalt">Cobalt</option>
+                        <option value="Paraiso Light">Paraiso Light</option>
+                        <option value="Paraiso Dark">Paraiso Dark</option>
+                        <option value="The Matrix">The Matrix</option>
+                        <option value="Default">Default</option>
+                    </select>
+                </div>
+            </div>
+            <div class="parser__wrapper">                
+            <div class="markdown">                
                 <h4 class="markdown__title">Type your markdown text below</h4>   
                 <textarea name="markdown" id="markdown" cols="20" rows="15" placeholder="Markdown..." class="textarea markdown__textarea" ></textarea>
                 <div class="copy">
@@ -116,6 +168,7 @@
     <script src="./js/index.js"></script>
     <script src="./js/toggler.js"></script>    
     <script src="./js/copy.js"></script>
-    <script src="./js/ajax.js"></script>    
+    <script src="./js/ajax.js"></script> 
+    <script src="./js/themes.js"></script>   
 </body>
 </html>

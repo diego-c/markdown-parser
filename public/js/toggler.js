@@ -4,7 +4,6 @@ var htmlCopy = document.querySelector('#html-copy');
 
 document.addEventListener('DOMContentLoaded', function() {
     var mirror = document.getElementsByClassName('CodeMirror')[1];
-    console.log(mirror);
 
     toggler.addEventListener('click', function() {
         if (togglerOuter.classList.contains('on')) {

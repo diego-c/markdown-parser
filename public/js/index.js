@@ -10,7 +10,8 @@ socket.on('server response', function(response) {
     htmlTxt = response.html;
     localStorage.setItem('_local', JSON.stringify({
         markdown: md,
-        html: htmlTxt
+        html: htmlTxt,
+        theme: currentTheme
     }));
     codeHTML.setOption('value', htmlTxt);
     getPreview(codeHTML);
@@ -28,10 +29,11 @@ function stylePreview() {
     link.href = "preview.css";
     link.rel = "stylesheet";
     link.type = "text/css";
-    var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document.head.appendChuld(link);
+    var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document.head.appendChild(link);
 }
 document.addEventListener('DOMContentLoaded', function() {
         initCopy();
+        pickTheme(localData.theme);
         stylePreview();
         getPreview(codeHTML);        
         
