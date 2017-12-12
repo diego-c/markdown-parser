@@ -11,19 +11,23 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('backgroundColorOff');
             togglerOuter.classList.remove('ripple');
             togglerOuter.classList.remove('on');
-            togglerOuter.classList.add('off');
-      
-            //html.style.display='block';
+            togglerOuter.classList.add('off');      
+            
             previewFrame.style.display = 'none';
             mirror.style.display='block';
+
+            var t = setTimeout(function() {
+                codeHTML.refresh();
+                clearTimeout(t);
+            },1);            
+            
         } else {
             this.classList.add('backgroundColorOn');
             this.classList.remove('backgroundColorOff');
             togglerOuter.classList.add('ripple');
             togglerOuter.classList.add('on');
             togglerOuter.classList.remove('off'); 
-            
-            //html.style.display='none';
+
             previewFrame.style.display = 'block';
             mirror.style.display='none';
         }  
