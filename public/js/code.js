@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     codeMarkdown.setOption('value', localData.markdown);
+    codeMarkdown.setOption('lineWrapping', true);
 
     codeHTML = CodeMirror.fromTextArea(html, {
         lineNumbers: true,
@@ -23,5 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
         readOnly: 'nocursor'
     });
 
-    codeHTML.setOption('value', localData.html);    
+    codeHTML.setOption('value', localData.html); 
+    codeHTML.setOption('lineWrapping', true);   
 });
