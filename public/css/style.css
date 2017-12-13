@@ -303,6 +303,14 @@ body {
   .themes__picker {
     padding: .2rem; }
 
+.preview {
+  display: inline-block;
+  float: right;
+  margin-bottom: 2rem;
+  padding-right: 5%; }
+  .preview-area-wrapper {
+    position: relative; }
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
@@ -412,31 +420,11 @@ body {
     text-decoration: none;
     color: #F92672; }
 
-.preview {
+.preview__text {
+  font-size: 2.5rem;
   display: inline-block;
-  float: right;
-  margin-bottom: 2rem;
-  padding-right: 5%; }
-  .preview-area-wrapper {
-    position: relative; }
-  .preview__text {
-    font-size: 2.5rem;
-    display: inline-block;
-    margin-right: 2rem;
-    vertical-align: bottom; }
-  .preview__area {
-    background-color: #272822;
-    color: #66D9EF;
-    width: 100%;
-    padding: 4rem;
-    max-height: 100%; }
-    .preview__area > * {
-      font-size: 2.5rem; }
-      .preview__area > *:not(:last-child) {
-        margin-bottom: 1rem; }
-
-#preview > * {
-  color: #A6E22E; }
+  margin-right: 2rem;
+  vertical-align: bottom; }
 
 .CodeMirror {
   font-size: 2.3rem;

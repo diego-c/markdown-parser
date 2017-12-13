@@ -1,32 +1,16 @@
 body {
-    font-family: "Source Sans Pro", sans-serif;  
-    font-weight: 400;  
-    color: $color-text-light;
-    line-height: 1.5;
+    @include base-typography;
 }
 
 .header__fork {    
-    &-link {
-        text-decoration: none;
-        &--text {
-        padding: 1.5rem;
-        border-radius: 50rem;
-        font-size: 2rem;
-        color: $color-link;       
-        }
-    }   
+    @include header-fork-link;   
 }
 .header__text {
     &--title {
-        font-size: 4rem;
-        letter-spacing: 1.5px;
-        word-spacing: .5rem;
+        @include title;
     }
     &--subtitle {
-        font-size: 3rem;
-        letter-spacing: 1px;
-        font-weight: 300;
-        word-spacing: .3rem;
+        @include subtitle;
     }
     &--link {  
         @include link;              
@@ -81,10 +65,6 @@ body {
 
 .footer {
     font-size: 2rem;
-    &__text {
-
-    }
-
     &__link {
         text-decoration: none;
         color: $monokai-pink;       
@@ -92,39 +72,7 @@ body {
 }
 
 .preview {
-    display: inline-block;
-    float: right;
-    margin-bottom: $margin-medium;
-    padding-right: 5%;
-
-    &-area-wrapper {
-        position: relative;
-    }
-
     &__text {
-        font-size: 2.5rem;
-        display: inline-block;
-        margin-right: $margin-medium;
-        vertical-align: bottom;
+        @include preview__text;
     }
-
-    &__area {
-        background-color: $monokai-dark;
-        color: $monokai-blue;        
-        width: 100%;        
-        padding: 4rem;
-        max-height: 100%;
-
-        & > * {
-            font-size: 2.5rem; 
-            
-            &:not(:last-child) {
-                margin-bottom: 1rem;
-            }
-        }
-    }
-}
-
-#preview > * {
-    color: $monokai-green;
 }
