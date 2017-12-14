@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         lineNumbers: true,
         mode: 'markdown',
         theme: localData.theme,
-        cursorHeight: .7
+        cursorHeight: .65
     });
 
     codeMarkdown.setOption('value', localData.markdown);
@@ -27,13 +27,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     codeHTML.setOption('value', localData.html); 
     codeHTML.setOption('lineWrapping', true);   
-
-    // what would be the best way to adjust the cursor position through the inline style? 
-    // events such as 'change', 'update', 'keypress', 'keyup', etc. don't seem to be working properly
-    // neither does css through !important, since the position of the cursor is always relative to .CodeMirror-cursors
-
-    codeMarkdown.on('focus', function() {
-        var cursor = document.querySelector('.CodeMirror-cursor');
-        cursor.style.top = '.45rem';
-    });
 });

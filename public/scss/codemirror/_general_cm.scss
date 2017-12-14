@@ -2,9 +2,14 @@
     font-size: 2.3rem;
     font-family: 'Fira Mono', monospace;
     width: 100%;
-    padding: 1rem .5rem;
+    padding: 1.5rem .5rem;
 
     & pre {
         padding-left: 2rem;
+        top: -.5rem;
+    }
+    &-linenumber {
+        font-size: 2.5rem;
+        top: -.5rem;
     }
 }
