@@ -11,7 +11,8 @@ uuidv4 = require('uuid/v4'),
 parser = require('cookie-parser'),
 session = require('express-session'),
 RedisStore = require('connect-redis')(session),
-path = require('path');
+path = require('path'),
+fs = require('fs');
 
 module.exports = {
     express,
@@ -27,5 +28,6 @@ module.exports = {
     parser,
     session,
     RedisStore,
-    path
+    path,
+    fs
 }

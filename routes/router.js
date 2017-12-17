@@ -18,7 +18,9 @@ router.get('/', (req, res) => {
                 maxAge: 1000 * 60 * 60 * 24
             }); 
         }
-        res.sendFile(path.join(__dirname, '../views/index.html'));
+        
+        const stream = requires.fs.createReadStream(path.join(__dirname, '../views/index.html'));
+        stream.pipe(res);
     });    
 });
 
