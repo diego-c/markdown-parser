@@ -1,6 +1,5 @@
-const requires = require('../packages/require');
-const path = require('path');
-const router = require('express').Router();
+const requires = require('../packages/require'),
+router = require('express').Router();
 
 // GET /
 let counter = 0;
@@ -18,8 +17,8 @@ router.get('/', (req, res) => {
                 maxAge: 1000 * 60 * 60 * 24
             }); 
         }
-        
-        const stream = requires.fs.createReadStream(path.join(__dirname, '../views/index.html'));
+
+        const stream = requires.fs.createReadStream(requires.path.join(__dirname, '../views/index.html'));
         stream.pipe(res);
     });    
 });
