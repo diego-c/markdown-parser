@@ -24,6 +24,7 @@
     "express-session": "^1.15.6",
     "helmet": "^3.9.0",
     "markdown-it": "^8.4.0",
+    "oppressor": "0.0.1",
     "redis": "^2.8.0",
     "socket.io": "^2.0.4",
     "uuid": "^3.1.0"
