@@ -1,6 +1,7 @@
 const requires = require('./packages/require'),
 router = require('./routes/router'),
-db = require('./db/connection');
+db = require('./db/connection'),
+port = process.env.PORT || 4000;
 require('./io/socket');
 
 requires.app.use(requires.helm());
@@ -11,7 +12,7 @@ requires.app.use(requires.express.static(requires.path.join(__dirname, 'public')
 
 requires.app.use(router);
 
-requires.server.listen('4000', () => console.log('running app on port 4000'));
+requires.server.listen(port, () => console.log(`running app on port ${port}`));
 
 
 /*
