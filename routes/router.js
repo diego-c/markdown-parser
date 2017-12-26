@@ -18,9 +18,7 @@ router.get('/', (req, res) => {
             }); 
         }
 
-        const stream = requires.fs.createReadStream(requires.path.join(__dirname, '../views/index.html'))
-        .pipe(requires.oppressor(req))
-        .pipe(res)
+        res.sendFile(requires.path.join(__dirname, '../views/index.html'));
     });    
 });
 

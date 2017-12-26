@@ -12,8 +12,7 @@ parser = require('cookie-parser'),
 session = require('express-session'),
 RedisStore = require('connect-redis')(session),
 path = require('path'),
-fs = require('fs'),
-oppressor = require('oppressor');
+fs = require('fs');
 
 module.exports = {
     express,
@@ -30,6 +29,5 @@ module.exports = {
     session,
     RedisStore,
     path,
-    fs,
-    oppressor
+    fs
 }
