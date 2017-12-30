@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         lineNumbers: true,
         mode: 'markdown',
         theme: localData.theme,
-        cursorHeight: .65
+        cursorHeight: .8
     });
 
     codeMarkdown.setOption('value', localData.markdown);
