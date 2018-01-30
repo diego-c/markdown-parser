@@ -1,3 +1,6 @@
+![Dependencies](https://david-dm.org/diego-c/markdown-parser.svg "Dependencies")
+![devDependencies](https://david-dm.org/diego-c/markdown-parser/dev-status.svg "devDependencies")
+
 # Simple Markdown Parser
 
 A real-time markdown -> HTML parser. The content is always saved in local storage, not on the server.
